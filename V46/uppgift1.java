@@ -12,7 +12,7 @@ public class uppgift1 {
 		System.out.println("skriv ett nummer: ");
 		
 		while (tal1 != 0) { // skapar loop
-			.km 
+			
 			tal1 = input.nextDouble();
 			tal2 += tal1; // samma som tal2 = tal2 + tal
 		}
