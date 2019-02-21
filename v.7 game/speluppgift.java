@@ -12,14 +12,18 @@ public class speluppgift {
 		int numberoftries = 0;
 		int guess;
 		boolean win = false;
-		
+		System.out.println("guess a number between 1 and 1000: ");
+	
 		while (win == false) {            //gör while loop (för vet inte hur många gånger den kommer gå om) för att man ska kunna testa tills man har rätt
 		
-		System.out.println("guess a number between 1 and 1000: ");
 		
 		guess = input.nextInt();   
 		numberoftries++;
 		
+		if (numberoftries == 11) {
+			System.out.println("Du förlora");
+			break;
+		}
 		if (guess == numberguess) {   // gör if och else if satser för att säga till vad som ska skicka tillbaka beroende på spelarens svar 
 			
 			win = true;
@@ -35,8 +39,10 @@ public class speluppgift {
 		
 		}
 		
+		if (win == true) {
 		System.out.println("you win!");
 		System.out.println("it took you " + numberoftries + " times");
+		}
 		
 
 	}
