@@ -5,22 +5,22 @@ public class speluppgift {
 
 	public static void main(String[] args) {
 		
-		Scanner input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);    //tar in Scanner
 		
 		Random rand = new Random();
-		int numberguess = rand.nextInt(1000);
+		int numberguess = rand.nextInt(1000);        //gör variabler för att använa i min kod
 		int numberoftries = 0;
 		int guess;
 		boolean win = false;
 		
-		while (win == false) {
+		while (win == false) {            //gör while loop (för vet inte hur många gånger den kommer gå om) för att man ska kunna testa tills man har rätt
 		
 		System.out.println("guess a number between 1 and 1000: ");
 		
-		guess = input.nextInt();
+		guess = input.nextInt();   
 		numberoftries++;
 		
-		if (guess == numberguess) {
+		if (guess == numberguess) {   // gör if och else if satser för att säga till vad som ska skicka tillbaka beroende på spelarens svar 
 			
 			win = true;
 		}
