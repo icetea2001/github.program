@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class uppgift1 {
@@ -8,6 +9,7 @@ public class uppgift1 {
 		double tal2 = 0;
 		
 		Scanner input = new Scanner(System.in);
+		
 		
 		System.out.println("skriv ett nummer: ");
 		

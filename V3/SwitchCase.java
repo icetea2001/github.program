@@ -73,14 +73,7 @@ public class SwitchCase {
 		svar = input.nextInt();
 		
 		if(svar==8) {
-			System.out.println("Welcome to movie inspiration database! Please choose a genre!");
-			System.out.println("(1) - Thriller");
-			System.out.println("(2) - Comedy");
-			System.out.println("(3) - Romance");
-			System.out.println("(4) - Fantasy");
-			System.out.println("(5) - Quit");
-			System.out.println();
-choise = input.nextLine();
+			
 		}
 		
 		input.close();

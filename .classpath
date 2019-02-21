@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="V46"/>
 	<classpathentry kind="src" path="V3"/>
+	<classpathentry kind="src" path="v.7 game"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
