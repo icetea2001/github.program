@@ -20,11 +20,11 @@ public class speluppgift {
 		guess = input.nextInt();   
 		numberoftries++;
 		
-		if (numberoftries == 11) {
+		if (numberoftries == 10) {
 			System.out.println("Du förlora");
 			break;
 		}
-		if (guess == numberguess) {   // gör if och else if satser för att säga till vad som ska skicka tillbaka beroende på spelarens svar 
+		else if (guess == numberguess) {   // gör if och else if satser för att säga till vad som ska skicka tillbaka beroende på spelarens svar 
 			
 			win = true;
 		}
@@ -39,12 +39,9 @@ public class speluppgift {
 		
 		}
 		
-		if (win == true) {
 		System.out.println("you win!");
 		System.out.println("it took you " + numberoftries + " times");
-		}
 		
-
 	}
 
 }
