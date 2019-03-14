@@ -26,7 +26,7 @@ public class speluppgift {
 			System.out.println("Du förlora");
 			break;
 		}
-		else if (guess == numberguess) {   // gör if och else if satser för att säga till vad som ska skicka tillbaka beroende på spelarens svar 
+		else if (guess == numberguess && numberoftries != 10) {   // gör if och else if satser för att säga till vad som ska skicka tillbaka beroende på spelarens svar 
 			
 			win = true;
 		}
@@ -46,10 +46,10 @@ public class speluppgift {
 		
 		System.out.println("Villu köra igen? tryck 1");
 		guess = input.nextInt();
-		if (guess == 1) {
-			win = false;
+		if (guess == 1) {                               //sätter som man kan gå in i while loopen igen och köra om spelet
+			win = false;    
 			numberoftries = 0;
-			numberguess = rand.nextInt(1000); 
+			numberguess = rand.nextInt(1000);          //gör som du får ett nytt nummer att gissa 
 			System.out.println("guess a number between 1 and 1000: ");
 		}else {
 			exit = true;
