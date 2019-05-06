@@ -13,6 +13,30 @@ public SecretWord() {
     
     visible = "";
     
+    for ( int i = 0; i < secret.length(); i++)
+    {
+        char c = secret.charAt(i);
+        
+        if ( c == ' ' )
+            visible += c;
+        else
+            visible += '_';
+    }
 }
 
+public String getClue() {
+	
+    return clue;
 }
+
+public String toString(){
+	
+    return visible;
+}
+
+
+
+
+}
+
+
