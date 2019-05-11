@@ -1,7 +1,7 @@
 public class hangWord {
     String clue, visible, secret;
 
-public hangWord() {
+public hangWord() { //lista på ord och ledtrådar för spelet
     String [] wordList = { "umbrella", "richard Feynman", "american gangster", "titanic" };
     
     String [] clueList = { "Rihanna's song", "Nobel Prize in Physics", "Denzel Washington", "isberg" };
@@ -11,7 +11,7 @@ public hangWord() {
     clue = clueList[rand];
     int wordLength = secret.length();
     
-    visible = "";
+    visible = ""; 
     
     for ( int i = 0; i < secret.length(); i++)
     {
