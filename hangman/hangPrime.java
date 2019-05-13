@@ -26,9 +26,10 @@ public class hangPrime {
         }
         
         if (word.isSolved())  //säger vad den ska skriva ut om du vinner
-            System.out.println("Great, you done it.");
+            System.out.println("congrats, you won.");
         else
             System.out.println("Sorry, too many errors.");
+            System.out.println("the word was " + hangWord.secret);
        
     }
     

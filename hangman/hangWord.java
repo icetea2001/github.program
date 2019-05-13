@@ -1,19 +1,19 @@
 public class hangWord {
-    String clue, visible, secret;
+    static String clue, visible, secret;
 
 public hangWord() { //lista på ord och ledtrådar för spelet
     String [] wordList = { "umbrella", "richard Feynman", "american gangster", "titanic" };
     
     String [] clueList = { "Rihanna's song", "Nobel Prize in Physics", "Denzel Washington", "isberg" };
     int rand;
-    rand = (int) (Math.random()* wordList.length - 1);
+    rand = (int) (Math.random()* wordList.length - 1); //håller koll på ordets längd
     secret = wordList[rand];
     clue = clueList[rand];
     int wordLength = secret.length();
     
-    visible = ""; 
+    visible = ""; //gör som space inte är behövst skrivas av användaren
     
-    for ( int i = 0; i < secret.length(); i++)
+    for ( int i = 0; i < secret.length(); i++) //skriver ut bindesstreck där det ska vara bokstäver och sätter mellanrum där de,t ska vara mellanrum istället för bindessträck
     {
         char c = secret.charAt(i);
         
@@ -44,13 +44,13 @@ public boolean update(char c) {
     
    
     
-    //We make the String secret an array
+    //gör String secret til array
     for(int i = 0; i < secret.length(); i++) {
         secretArray[i] = secret.charAt(i);
         visibleArray[i] = visible.charAt(i);
     }
     
-    //We are uptading our empty visible array
+    //vi uppdaterar den toma visible array
     for(int k = 0; k < secret.length();k++)
     {
         
@@ -69,7 +69,7 @@ public boolean update(char c) {
     
     return contains;
 }
-//This is a method to check if the secret word is solved
+//en metod för att kolla om du gissa rätt på secretword 
 public boolean isSolved()
 {   
     return secret.equalsIgnoreCase(visible);
