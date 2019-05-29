@@ -6,7 +6,6 @@
 	<classpathentry kind="src" path="V3"/>
 	<classpathentry kind="src" path="v.7 game"/>
 	<classpathentry kind="src" path="secure doors"/>
-	<classpathentry kind="src" path="hangman"/>
 	<classpathentry kind="src" path="hangman2"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
