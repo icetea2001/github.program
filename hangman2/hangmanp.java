@@ -9,54 +9,40 @@ public class hangmanp {
 	// gör variabler för att använa i min kod
 	static int tries = 0; // antal användarens gissningar
 	static String guess; // gissning under spelets gång
-	// static char guessC;
-	// static String hidden = "";
+	static char guessC;
+	static String hidden = "";
 	static ArrayList<Character> cor = new ArrayList<Character>(); // lista med korrekta gissningar
 	static boolean exit = false; //variabel för att stänga loop när man spelat klart
 
 	public static void main(String[] args) {
 
-		System.out.println("välkommen gissa ordet");
+		System.out.println("välkommen till hangman" + "\ndu har 5 försök" );
 		ordet(); //kallar klassen ordet
 		
 	}
 
 	public static void ordet() {
 		String[] lista = { "program", "lampa", "skulptur", "idiot" }; //lista av ord som kan komma under spelet
-		Random randomW = new Random(); //pö
-		int randomN = randomW.nextInt(lista.length);
+		Random randomW = new Random(); //gör randomW som den väljer en random siffra mellan 0-3
+		int randomN = randomW.nextInt(lista.length); //
 		ord = lista[randomN];
-		System.out.println(ord);
 		guess();
 	}
 	
 
 	public static void guess() {
-		System.out.println("börja gissa, du har 5 försök");
-		
-		//do {
-			//for (int y = 0; y < ord.length(); y++) {
-				
-				
-		//	if (cor.contains(ord.charAt(y))) {
-		//		System.out.print(ord.charAt(y));
-		//	} else {
-		//		System.out.print("-");
-		//	}
-			
-		//	}
+		System.out.println("börja gissa");
 		
 	do {	
 		int y=0;
 		int won = 0;
+		int count = 0;
 		do {
 			
-			if (cor.contains(ord.charAt(y))) 
-			{
+			if (cor.contains(ord.charAt(y))) {
 				System.out.print(ord.charAt(y));
 			} 
-			else 
-			{
+			else {
 				System.out.print("-");
 				won = 1;
 			}
@@ -80,17 +66,32 @@ public class hangmanp {
 				exit = true;
 			}	
 			
-			else if (guess.length()==1) {
+			else if (guess.length()== 1) {
 				System.out.println("Du har gissat på en bokstav");
 				for (int i = 0; i < ord.length(); i++) {
-					if (ord.charAt(i) == guess.charAt(0))
-					{
-					cor.add(guess.charAt(0));
+					if (ord.charAt(i) == guess.charAt(0)) {
+						cor.add(guess.charAt(0));
+					    count++;
+					    }
 					}
-					}
-				
-			}
+				}
+		if (count== 0) {
+			tries++;
+			System.out.println("antal försök: " + tries);
 		}
+
+	 else {
+		System.out.println("antal försök: " + tries);
+	}
+
+	if (tries == 5) {
+		System.out.println("du förlora");
+		System.out.println("ordet var: " + ord);
+		exit = true;
+	}
+				
+		}
+
 	while(!exit);
 }
 }
