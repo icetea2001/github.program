@@ -14,10 +14,11 @@ public class hangmanp {
 	static String hidden = "";
 	static ArrayList<Character> cor = new ArrayList<Character>(); // lista med korrekta gissningar
 	static boolean exit = false; //variabel för att stänga loop när man spelat klart
-
+   
+	
 	public static void main(String[] args) {
 
-		System.out.println("välkommen till hangman" + "\ndu har 5 försök" );
+		System.out.println("välkommen till hangman" + "\ndu har 10 försök" );
 		ordet(); //kallar klassen ordet
 		
 	}
@@ -93,7 +94,8 @@ public class hangmanp {
 		}
 
 	while(!exit); //sålänge exit inte är true
-}
+
+} 
 }
 
 		
