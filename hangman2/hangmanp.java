@@ -56,6 +56,8 @@ public class hangmanp {
 		}
 		while(y < ord.length());// så länge y (som är antal rätta bokstäver) är mindre än ordets antal bokstäver
 
+		
+		
 		if(won == 0) {
 			System.out.println("\nyou won!!!");
 			exit = true;
@@ -91,9 +93,7 @@ public class hangmanp {
 		exit = true;
 	}
 				
-		}
-
-	while(!exit); //sålänge exit inte är true
+		}while(!exit); //sålänge exit inte är true
 
 } 
 }
